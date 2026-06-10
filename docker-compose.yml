@@ -1,0 +1,47 @@
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: wp-app
+    restart: always
+    ports:
+      - "8080:80"
+
+    environment:
+      WORDPRESS_DB_HOST: mariadb
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: password123
+      WORDPRESS_DB_NAME: wordpressdb
+
+    depends_on:
+      - mariadb
+
+    networks:
+      - frontend-net
+      - backend-net
+
+  mariadb:
+    image: mariadb:latest
+    container_name: wp-db
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: wordpressdb
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: password123
+
+    volumes:
+      - db_data:/var/lib/mysql
+
+    networks:
+      - backend-net
+
+volumes:
+  db_data:
+
+networks:
+  frontend-net:
+    driver: bridge
+
+  backend-net:
+    driver: bridge
