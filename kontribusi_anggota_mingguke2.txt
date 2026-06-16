@@ -1,0 +1,24 @@
+Kelompok Dani : Cloud Computing
+
+Minggu 2 – Optimasi Performa & Object Storage
+
+1. Dani Akhiles
+
+   * Update Docker Compose dengan penambahan Redis dan MinIO
+   * Integrasi Redis Cache pada WordPress
+   * Konfigurasi MinIO sebagai Object Storage
+   * Dokumentasi dan pengelolaan repository GitHub
+
+2. Fimantus Rainer Agung
+
+   * Pengujian konektivitas Redis pada WordPress
+   * Pengujian upload media pada WordPress
+   * Penyelesaian course Cloud Computing di Bisa.ai
+   * Dokumentasi hasil pengujian
+
+3. Etwaridus Nggera Hibur
+
+   * Verifikasi bucket MinIO dan penyimpanan object
+   * Monitoring container Docker (WordPress, MariaDB, Redis, MinIO)
+   * Penyelesaian course Cloud Computing di Bisa.ai
+   * Verifikasi screenshot dan bukti implementasi
